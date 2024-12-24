@@ -1,0 +1,12 @@
+/* Add this CSS for mobile responsiveness */
+.desktop-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 600px) {
+    .desktop-nav {
+      display: none; /* Hide the desktop navbar items on small screens */
+    }
+  }
+  

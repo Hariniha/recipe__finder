@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // U
 import Navbar from './components/Navbar';
 import RecipeModal from './components/RecipeModal';
 import FeedbackForm from './components/Feedback';  // Make sure FeedbackForm is imported
-
+import About from "./components/About"
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearchDone, setIsSearchDone] = useState(false);
@@ -81,12 +81,9 @@ const App = () => {
           )} />
           
           {/* Feedback Route */}
-          <Route path="/feedback" element={
-            <FeedbackForm
-              
-            
-            />
-          } />
+          <Route path="/feedback" element={ <FeedbackForm/> } />
+          <Route path="/about" element={ <About/> } />
+   
         </Routes>
       </div>
     </Router>
