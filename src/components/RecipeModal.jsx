@@ -51,8 +51,9 @@ const RecipeModal = ({ searchTerm, setIsRecipesLoaded }) => {
 
   return (
     <div>
+      
       {error && <div className="text-red-500 text-center mt-4">Error fetching recipes: {error}</div>}
-
+      
       {/* Show recipe names or details */}
       {selectedRecipe ? (
         // Show the details of the selected recipe
