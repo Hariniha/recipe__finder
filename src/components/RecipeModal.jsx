@@ -131,7 +131,7 @@ const RecipeModal = ({ searchTerm, setIsRecipesLoaded }) => {
                 ))}
               </div>
             ) : (
-              <div className="text-center text-gray-600 mt-4">
+              <div className="text-center font-serif text-gray-600 mt-4">
                 <p>No recipes found for your search. Showing all available recipes.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                   {allRecipes.map((recipe) => (
