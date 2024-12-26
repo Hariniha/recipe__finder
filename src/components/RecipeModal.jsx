@@ -52,12 +52,12 @@ const RecipeModal = ({ searchTerm, setIsRecipesLoaded }) => {
   return (
     <div>
       
-      {error && <div className="text-red-500 text-center mt-4">Error fetching recipes: {error}</div>}
+      {error && <div className="text-red-500  text-center mt-4">Error fetching recipes: {error}</div>}
       
       {/* Show recipe names or details */}
       {selectedRecipe ? (
         // Show the details of the selected recipe
-        <div className="bg-white p-6 rounded-lg shadow-lg mt-8 max-w-3xl mx-auto">
+        <div className="bg-white p-6 rounded-lg  shadow-lg mt-8 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">{selectedRecipe.name}</h2>
           <div className="flex flex-col md:flex-row mb-6">
             <img
@@ -147,15 +147,15 @@ const RecipeModal = ({ searchTerm, setIsRecipesLoaded }) => {
                         <div className="p-8">
                           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
                             <button
-                              className="text-xl font-semibold text-indigo-700 hover:text-indigo-500"
+                              className="text-xl  text-indigo-700 hover:text-indigo-500"
                               onClick={() => handleRecipeClick(recipe)} // When clicked, show the recipe details
                             >
                               {recipe.name}
                             </button>
                           </div>
-                          <p className="mt-2 text-gray-500">Cuisine: {recipe.cuisine}</p>
-                          <p className="mt-2 text-gray-500">Difficulty: {recipe.difficulty}</p>
-                          <p className="mt-2 text-gray-500">Calories: {recipe.caloriesPerServing} per serving</p>
+                          <p className="mt-2 font-serif text-gray-500">Cuisine: {recipe.cuisine}</p>
+                          <p className="mt-2 font-serif text-gray-500">Difficulty: {recipe.difficulty}</p>
+                          <p className="mt-2 font-serif text-gray-500">Calories: {recipe.caloriesPerServing} per serving</p>
                         </div>
                       </div>
                     </div>
@@ -164,7 +164,7 @@ const RecipeModal = ({ searchTerm, setIsRecipesLoaded }) => {
               </div>
             )
           ) : (
-            <div className="text-center text-gray-600 mt-4">
+            <div className="text-center text-gray-600 font-serif mt-4">
               <p>Loading recipes...</p>
             </div>
           )}

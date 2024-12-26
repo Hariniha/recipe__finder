@@ -1,10 +1,12 @@
 // App.jsx
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Use Routes and Route from react-router-dom
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import RecipeModal from './components/RecipeModal';
-import FeedbackForm from './components/Feedback';  // Make sure FeedbackForm is imported
+import FeedbackForm from './components/Feedback';
 import About from "./components/About"
+import Footer from './components/Footer';
+
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearchDone, setIsSearchDone] = useState(false);
@@ -42,49 +44,51 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App bg-orange-100 min-h-screen flex flex-col items-center p-4">
+      <div className="flex flex-col bg-orange-100 min-h-screen">
         <Navbar />
-        <Routes> {/* Use Routes to define paths */}
-          {/* Home Route */}
-          <Route path="/" element={(
-            <>
-              <h1 className="text-5xl font-extrabold text-gray-800 my-4 drop-shadow-lg">
-                Recipe Finder
-              </h1>
-              <input
-                type="text"
-                placeholder="Search recipes..."
-                value={searchTerm}
-                onChange={handleSearchChange}
-                className="p-2 w-full max-w-md border-2 border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300 transition duration-200 mb-4"
-              />
-              <button
-                onClick={handleSearchSubmit}
-                className="bg-orange-500 text-white py-2 px-6 rounded-lg mt-2 transition hover:bg-orange-600"
-              >
-                Search
-              </button>
-
-              {isSearchDone && (
-                <div className="text-green-500 text-xl mt-4 font-semibold">
-                  Thank you for searching! Here are your results.
-                </div>
-              )}
-
-              {isSearchDone && searchTerm && (
-                <RecipeModal
-                  searchTerm={searchTerm}
-                  setIsRecipesLoaded={setIsRecipesLoaded}
+        <div className="App  flex-grow flex flex-col items-center p-4">
+          <Routes>
+            {/* Home Route */}
+            <Route path="/" element={(
+              <>
+                <h1 className="text-5xl font-extrabold text-gray-800 my-4 drop-shadow-lg">
+                  Recipe Finder
+                </h1>
+                <input
+                  type="text"
+                  placeholder="Search recipes..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                  className="p-2 w-full max-w-md border-2 border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300 transition duration-200 mb-4"
                 />
-              )}
-            </>
-          )} />
-          
-          {/* Feedback Route */}
-          <Route path="/feedback" element={ <FeedbackForm/> } />
-          <Route path="/about" element={ <About/> } />
-   
-        </Routes>
+                <button
+                  onClick={handleSearchSubmit}
+                  className="bg-orange-500 text-white py-2 px-6 rounded-lg mt-2 transition hover:bg-orange-600"
+                >
+                  Search
+                </button>
+
+                {isSearchDone && (
+                  <div className="text-green-500 text-xl mt-4 font-semibold">
+                    Thank you for searching! Here are your results.
+                  </div>
+                )}
+
+                {isSearchDone && searchTerm && (
+                  <RecipeModal
+                    searchTerm={searchTerm}
+                    setIsRecipesLoaded={setIsRecipesLoaded}
+                  />
+                )}
+              </>
+            )} />
+            
+            {/* Feedback Route */}
+            <Route path="/feedback" element={ <FeedbackForm/> } />
+            <Route path="/about" element={ <About/> } />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </Router>
   );

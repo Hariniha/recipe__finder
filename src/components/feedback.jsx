@@ -2,8 +2,8 @@ import React from 'react'
 
 const Feedback = () => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg mt-8 max-w-xl w-full">
-    <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">We'd Love Your Feedback!</h2>
+    <div className="bg-white font-serif p-6 rounded-lg shadow-lg mt-8 max-w-xl w-full">
+    <h2 className="text-2xl  font-bold text-gray-800 mb-4 text-center">We'd Love Your Feedback!</h2>
     <form  className="space-y-4">
       <div>
         <label

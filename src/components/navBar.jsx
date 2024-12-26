@@ -12,7 +12,10 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import BookIcon from "../assets/book.png"
 import "./navstyle.css"
+
+
 const StyledAppBar = styled(AppBar)({
   backgroundColor: '#ff7043',
 });
@@ -60,16 +63,17 @@ const Navbar = () => {
             <MenuIcon />
           </StyledIconButton>
 
-          <Title variant="h6">
+          <Title variant="h6" className='flex gap-2'>
+          <img src={BookIcon} alt="Book Icon"  className='w-7'/>
             Recipe Finder
           </Title>
 
           {/* Desktop View Buttons */}
-          <div className="desktop-nav" style={{ display: 'flex', flexGrow: 1, justifyContent: 'flex-end' }}>
+          <div className="desktop-nav " style={{ display: 'flex', flexGrow: 1, justifyContent: 'flex-end' }}>
             <StyledButton color="inherit" component={Link} to="/">
               Home
             </StyledButton>
-            <StyledButton color="inherit" component={Link} to="/about">
+            <StyledButton color="inherit"  component={Link} to="/about">
               About
             </StyledButton>
             <StyledButton color="inherit" component={Link} to="/feedback">
