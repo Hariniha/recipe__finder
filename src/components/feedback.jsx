@@ -1,5 +1,11 @@
 import React from 'react'
 
+const submit = ()=>{
+  alert("Your Feedback Submitted Successfully!!!!");
+};
+
+
+
 const Feedback = () => {
   return (
     <div className="bg-white font-serif p-6 rounded-lg shadow-lg mt-8 max-w-xl w-full">
@@ -59,6 +65,7 @@ const Feedback = () => {
       <button
         type="submit"
         className="w-full bg-orange-500 text-white py-2 px-6 rounded-lg mt-4 transition hover:bg-orange-600"
+        onClick={submit}
       >
         Submit Feedback
       </button>

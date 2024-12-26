@@ -13,7 +13,7 @@ const App = () => {
   const [isRecipesLoaded, setIsRecipesLoaded] = useState(false); // Track when recipes are fully loaded
   const [feedback, setFeedback] = useState({
     question1: '',
-    question2: '',
+    question2: '',           
     question3: '',
   });
 
