@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navBar';
 import RecipeModal from './components/RecipeModal';
-import FeedbackForm from './components/feedback';
+import FeedbackForm from './components/Feedback';
 import About from "./components/About"
 import Footer from './components/Footer';
 
