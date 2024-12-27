@@ -64,7 +64,7 @@ const Navbar = () => {
           </StyledIconButton>
 
           <Title variant="h6" className='flex gap-2'>
-          <img src={BookIcon} alt="Book Icon"  className='w-7'/>
+          <img src={BookIcon} alt="Book Icon"  className='w-7 '/>
             Recipe Finder
           </Title>
 

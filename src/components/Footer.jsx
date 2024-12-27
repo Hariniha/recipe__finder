@@ -1,5 +1,6 @@
 // components/Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,14 +10,13 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Recipe Finder. All rights reserved.
         </p>
         <div className="flex justify-center space-x-4 mt-2">
-            <a href="/" className="hover:text-orange-200">Home</a>
-          <a href="/about" className="hover:text-orange-200">
+          <Link to="/" className="hover:text-orange-200">Home</Link>
+          <Link to="/about" className="hover:text-orange-200">
             About Us
-          </a>
-          <a href="/feedback" className="hover:text-orange-200">
+          </Link>
+          <Link to="/feedback" className="hover:text-orange-200">
             Feedback
-          </a>
-          
+          </Link>
         </div>
       </div>
     </footer>
